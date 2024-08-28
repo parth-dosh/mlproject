@@ -6,7 +6,7 @@
 import sys
 # any exception that is being controlled will be handled by sys 
 import logging # just to check whether exception.py is working 
-
+from src.logger import logging
 
 def error_message_detail(error, error_detail:sys): 
     _,_,exc_tb = error_detail.exc_info() # exc_info tells us which file the error has occured, which line it has occured and it is stored in our exc_tb info
@@ -35,6 +35,8 @@ class CustomException(Exception):
     def __str__(self): 
         return self.error_message  # used for printing the error message 
     
+
+
 
 
     
